@@ -1,0 +1,11 @@
+FROM ubuntu:14.04
+
+RUN apt-get update && apt-get install -y \
+  tar wget git \
+  m4 automake flex \
+  openjdk-8-jre \
+  autoconf libtool \
+  build-essential python-dev python-six python-virtualenv libcurl4-nss-dev libsasl2-dev libsasl2-modules maven libapr1-dev libsvn-dev \
+  ruby-dev libevent-dev
+
+RUN gem install --no-ri --no-rdoc fpm
